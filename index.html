@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clockwork</title>
+</head>
+<body class="body" id="body">
+<header>
+    <div class="logo-container"><a href="https://www.fontspace.com/category/graffiti"><img class="logo"src="img\arena-graffiti.png" alt="Graffiti fonts"></a>
+    </div>
+    <button class="prof-link" ><a href="">Albums</a></button>
+    
+</header>
+<!-- <button class="dark" id="dark" onclick="darkfun()">Dark</button> -->
+<canvas id="canvas" class="canvas-bg-color"></canvas>   
+
+<div class="profile-container">
+    <div class="prof-img"></div>
+    <div class="prof-name"></div>
+    <div class="prof-links">
+        <button class="prof-link"><a href="https://instagram.com/herb_rosa8?igshid=YmMyMTA2M2Y=">Follow</a></button>
+        <button class="prof-link"><a href="https://www.youtube.com/channel/UC-1fzgjWkVAIQm75guJMc0w">Subscribe</a></button>
+        <button class="prof-link"><a href="#">Hire Me</a></button>
+    </div>
+</div>
+
+<section class="music-section">
+    <audio class="audio" src="music\SIMPLIFIED.mp3" id="audio"></audio>
+    <audio class="audio" src="music\DREAM WORLD.mp3" id="audio1"></audio>
+    <audio class="audio" src="music\HIGHER POWER.mp3" id="audio2"></audio>
+    <audio class="audio" src="music\FLIP.mp3" id="audio3"></audio>
+    <audio class="audio" src="music\VELVET ROPES.mp3" id="audio4"></audio>
+   
+    <div class="music-container">
+        <div class="song-info-container">
+            <div class="song-img"></div>
+            <div class="song-title">
+        </div>
+            <h2>Simplified</h2>
+        </div>
+        <div class="song-btn-container">
+            <!-- onclick="playSong(this)" -->
+        <div class="play-container" id="play-container" >
+            <ion-icon class="play" id="play" onclick="playSong(this)" name="play-sharp"></ion-icon>
+        </div>
+
+            <div id="pause-container"></div>
+            <ion-icon class="like" id="like" onclick="likeSong(this)" name="heart-sharp" ></ion-icon>
+            <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+        </div>
+      
+
+    </div>
+    <div class="music-container">
+        <div class="song-info-container">
+            <div class="song-img"></div>
+            <div class="song-title">
+        </div>
+            <h2>Dream World</h2>
+        </div>
+        <div class="song-btn-container">
+            <!-- onclick="playSong(this)" -->
+        <div class="play-container" id="play-container1" >
+            <ion-icon class="play" id="play1" onclick="playSong(this)" name="play-sharp"></ion-icon>
+        </div>
+
+            <div id="pause-container"></div>
+            <ion-icon class="like" id="like" onclick="likeSong(this)" name="heart-sharp" ></ion-icon>
+            <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+        </div>
+      
+
+    </div>
+    <div class="music-container">
+        <div class="song-info-container">
+            <div class="song-img"></div>
+            <div class="song-title">
+        </div>
+            <h2>Higher Power</h2>
+        </div>
+        <div class="song-btn-container">
+            <!-- onclick="playSong(this)" -->
+        <div class="play-container" id="play-container2" >
+            <ion-icon class="play" id="play2" onclick="playSong(this)" name="play-sharp"></ion-icon>
+        </div>
+
+            <div id="pause-container"></div>
+            <ion-icon class="like" id="like" onclick="likeSong(this)" name="heart-sharp" ></ion-icon>
+            <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+        </div>
+      
+
+    </div>
+    <div class="music-container">
+        <div class="song-info-container">
+            <div class="song-img"></div>
+            <div class="song-title">
+        </div>
+            <h2>Flip</h2>
+        </div>
+        <div class="song-btn-container">
+            <!-- onclick="playSong(this)" -->
+        <div class="play-container" id="play-container3" >
+            <ion-icon class="play" id="play3" onclick="playSong(this)" name="play-sharp"></ion-icon>
+        </div>
+
+            <div id="pause-container"></div>
+            <ion-icon class="like" id="like" onclick="likeSong(this)" name="heart-sharp" ></ion-icon>
+            <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+        </div>
+      
+
+    </div>
+    <div class="music-container">
+        <div class="song-info-container">
+            <div class="song-img"></div>
+            <div class="song-title">
+        </div>
+            <h2>Velvet Ropes</h2>
+        </div>
+        <div class="song-btn-container">
+            <!-- onclick="playSong(this)" -->
+        <div class="play-container" id="play-container4" >
+            <ion-icon class="play" id="play4" onclick="playSong(this)" name="play-sharp"></ion-icon>
+        </div>
+
+            <div id="pause-container"></div>
+            <ion-icon class="like" id="like" onclick="likeSong(this)" name="heart-sharp" ></ion-icon>
+            <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+        </div>
+      
+
+    </div>
+    
+
+
+</section>
+
+<footer>
+
+</footer>
+<section class="control-container">
+    <div class="music-controls">
+
+        <div class="song-name">
+            <h2 id="title">song title</h2>
+        </div>
+        <div class="controls">
+
+            <div class="prev" id="prev" onclick="prevSong(this)">
+                <ion-icon class="playlist-controls" id="prev-btn" name="play-skip-back-sharp"></ion-icon>
+            </div>
+            <div class="playlist" id="playlist">
+                <ion-icon class="playlist-controls" id="playlist-btn" onclick="playSong(this)" name="play-sharp"></ion-icon>
+            </div>
+            <div class="next" id="next" onclick="nextSong(this)">
+                <ion-icon class="playlist-controls" id="next-btn" name="play-skip-forward-sharp"></ion-icon>
+            </div>
+
+        </div>
+       
+
+    </div>
+</section>
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
